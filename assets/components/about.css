@@ -1,0 +1,113 @@
+.aboutSection {
+  padding-top: var(--main-padding-value);
+
+  position: relative;
+
+  background-color: var(--second-bg-color);
+  color: white;
+}
+
+.aboutSection::after {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: white;
+  width: 6px;
+}
+
+.chapters {
+  padding-bottom: var(--main-padding-value);
+}
+
+.aboutChapter {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  position: relative;
+}
+
+.aboutChapter::before {
+  content: '';
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: var(--second-bg-color);
+  width: var(--chapter-hint-radius);
+  height: var(--chapter-hint-radius);
+  position: absolute;
+  z-index: 10;
+}
+
+.aboutChapter:nth-child(odd)::before {
+  right: calc(
+    ((var(--chapter-margin) / 4) + var(--chapter-hint-radius) / 2 + 5px) * -1
+  );
+}
+
+.aboutChapter:nth-child(even)::before {
+  left: calc(
+    ((var(--chapter-margin) / 4) + var(--chapter-hint-radius) / 2) * -1
+  );
+}
+
+.aboutChapter:nth-child(odd) {
+  right: var(--chapter-margin);
+}
+
+.aboutChapter:nth-child(even) {
+  left: var(--chapter-margin);
+}
+
+.aboutChapter:nth-child(odd) .chapterHeading {
+  text-align: right;
+}
+
+.chapterHeading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.chapterInfo {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.buildingsWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.build {
+  width: inherit;
+  object-fit: cover;
+}
+
+.blackBuild {
+  z-index: 1;
+  position: relative;
+  bottom: 10px;
+}
+
+.whiteBuild {
+  z-index: 2;
+  position: absolute;
+  bottom: -1px;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutSection::after {
+    content: none;
+  }
+
+  .aboutChapter::before {
+    content: none;
+  }
+
+  .aboutChapter {
+    position: static;
+    margin: 2rem 0;
+  }
+
+}

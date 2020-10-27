@@ -1,0 +1,58 @@
+@import '../components/header.css';
+@import '../components/heading.css';
+@import '../components/about.css';
+@import '../components/team.css';
+@import '../components/services.css';
+
+:root {
+  scroll-behavior: smooth;
+  font-family: Helvetica, sans-serif;
+  --heading-section-margin: 18rem;
+  --main-padding-value: 10rem;
+
+  --card-max-width: 170px;
+  --second-bg-color: #1d1d1d;
+
+  --chapter-hint-radius: 25px;
+  --chapter-margin: 200px;
+
+  --service-icon-radius: 170px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:focus {
+  outline: none;
+}
+
+.section {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --heading-section-margin: 12rem;
+    --main-padding-value: 5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --heading-section-margin: 4rem;
+    --main-padding-value: 3rem;
+  }
+}

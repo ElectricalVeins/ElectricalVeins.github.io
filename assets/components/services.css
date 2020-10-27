@@ -1,0 +1,54 @@
+.servicesSection {
+  color: white;
+  padding: 5rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.servicesSection .card:nth-child(even) {
+  position: static;
+}
+
+.skew {
+  transform: skew(0, -4deg);
+  background-color: var(--second-bg-color);
+}
+
+.unskew {
+  transform: skew(0, 4deg);
+}
+
+.servicesHeading {
+}
+
+.servicesSubHeading {
+}
+
+.cardBorder {
+  box-sizing: border-box;
+
+  width: var(--service-icon-radius);
+  height: var(--service-icon-radius);
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.cardHeader {
+  font-size: 1.5rem;
+  line-height: 4;
+}
+
+.cardInfo {
+  font-size: 1.1rem;
+  opacity: 0.3;
+}
+
+.blogBtn {
+  display: inline-block;
+  padding: 30px 50px;
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 600;
+}

@@ -1,0 +1,60 @@
+.pageHeader {
+  max-width: 100%;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItem + .navItem {
+  margin-left: 40px;
+}
+.navItem {
+  white-space: nowrap;
+}
+.navLogo {
+  margin: 0 20px;
+}
+
+.navLink {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.pageFooter {
+  margin: 40px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navLogoItem {
+    display: none !important;
+  }
+
+  .navItem + .navItem {
+    margin-left: 20px;
+  }
+
+  .navList {
+    padding: 10px;
+    overflow-x: auto;
+    font-size: 1.25rem;
+    border-bottom: 1px solid lightgrey;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navList {
+    justify-content: unset;
+    align-items: unset;
+  }
+}

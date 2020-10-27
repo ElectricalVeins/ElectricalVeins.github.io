@@ -1,0 +1,95 @@
+.teamSection {
+  padding: 5rem;
+}
+
+.teamHeading {
+  font-size: 1.5rem;
+}
+
+.teamSubHeading {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  margin: var(--main-padding-value) 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--card-max-width);
+  overflow: hidden;
+
+  text-align: center;
+}
+
+.card:nth-child(even) {
+  position: relative;
+  bottom: 90px;
+}
+
+.cardPhoto {
+  max-width: var(--card-max-width);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  filter: grayscale(1);
+}
+
+.credentials {
+  margin: 1rem auto;
+}
+
+.personName {
+  line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.personPosition {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+  max-width: var(--card-max-width);
+  width: 50%;
+  overflow: hidden;
+}
+
+.cardIcon {
+  color: grey;
+}
+
+.cardIcon + .cardIcon {
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card:nth-child(even) {
+    position: static;
+  }
+
+  .card{
+    padding: 2rem 0;
+  }
+}
